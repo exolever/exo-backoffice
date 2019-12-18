@@ -1,0 +1,14 @@
+<a href="#">
+    <small class="pull-right text-muted"> <%= date_max %></small>
+    <strong><%= from_header.address %></strong>
+    <div class="small m-t-xs">
+        <p class="m-b-xs">
+            <%= subject %>
+        </p>
+        <p class="m-b-none text-right">
+            <% if (read_total > 0 ) { %>
+                <span class="label text-right label-primary">UNREAD</span>
+            <% }; %>
+        </p>
+    </div>
+</a>

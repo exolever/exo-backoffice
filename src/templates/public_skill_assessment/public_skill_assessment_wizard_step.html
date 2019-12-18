@@ -1,0 +1,52 @@
+<h2 class='StepTitle'><%= name %></h2>
+<form class="form-horizontal form-label-left col-xs-11">
+    <%= template %>
+    <% _.each(questions, function(question){ %>
+        <div class="form-group m-b-xl" data-name="<%= question.slug %>">
+            <div class='row no-margins'>
+                <label class="question col-md-3 col-sm-3 col-xs-12 text-left p-r-none control-label" for="<%= question.slug %>"><%= question.name %><% if (question.required) { %> <span class="required">*</span> <% } %>
+                </label>
+                <% if (question.type_question === 'R') { %>
+                <div class="col-md-9 col-sm-9 col-xs-12 text-left radio container-answer">
+                    <% _.each(question.options, function(answer){ %>
+                        <div class="i-checks iradio  col-xs-12 p-l-0 p-t-10 border-bottom p-bottom-10">
+                            <label>
+                                <input type="radio" name='<%= question.slug %>' value='<%= answer.value %>'>
+                                <span class='media-middle'><%= answer.name %></span>
+                            </label>
+                        </div>
+                    <% }); %>
+                </div>
+                <% } %>
+                <% if (question.type_question === 'S') { %>
+                <div class="col-md-9 col-sm-9 col-xs-12 text-left radio container-answer">
+                    <select name='<%= question.slug %>' class='select2' id="id_<%= question.slug %>" style='width:100%'>
+                    <% _.each(question.options, function(answer){ %>
+                        <option value="<%= answer.value %>">
+                            <%= answer.name %>
+                        </option>
+                    <% }); %>
+                    </select>
+                </div>
+                <% } %>
+                <% if (question.type_question === 'C') { %>
+                <div class="col-md-9 col-sm-9 col-xs-12 text-left radio container-answer">
+                    <% _.each(question.options, function(answer){ %>
+                        <div class="i-checks iradio col-xs-12 p-l-0 p-t-10 border-bottom p-bottom-10">
+                            <label>
+                                <input type="checkbox" name='<%= question.slug %>' value='<%= answer.value %>' data-maxoptions="<%= question.max_options %>">
+                                <span class='media-middle'><%= answer.name %></span>
+                            </label>
+                        </div>
+                    <% }); %>
+                </div>
+                <% } %>
+                <% if (question.type_question === 'I') { %>
+                <div class="col-md-9 col-sm-9 col-xs-12 text-left radio container-answer">
+                    <input type="text" name='<%= question.slug %>' id="id_<%= question.slug%>" class='form-control'>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    <% }); %>
+</form>

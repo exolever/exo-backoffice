@@ -1,0 +1,13 @@
+<div class="form-group required">
+    <label class="control-label" for="id_role">Select role</label>
+    <select class="form-control select2" id="id_role" name="role" data-placeholder="Select a role" required="required">
+        <% _.each(roles, function(value){ %>
+            <option value="<%= value.pk %>"><%= value.name %></option>
+        <% }); %>
+    </select>
+</div>
+<div class="form-group required">
+    <label class="control-label" for="id_consultant">Select ExO Consultant</label>
+    <select class="form-control select2" id="id_consultant" name="consultant" data-placeholder="Select a consultant" required="required">
+    </select>
+</div>

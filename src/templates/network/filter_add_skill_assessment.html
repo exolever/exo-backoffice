@@ -1,0 +1,22 @@
+<h4 class='text-center'>Add new filter</h4>
+<div class="form-group required">
+    <label class="col-md-3 col-sm-3 col-xs-12 control-label" for="id_question">Question</label>
+    <div class="col-md-9 col-sm-9 col-xs-12">
+        <select class="form-control select2" id="id_question" name="question" required="required" tabindex="-1" aria-hidden="true" data-placeholder="Select a question" style="width: 100%">
+        <option value="">---</option>
+        <% _.each(questions, function(question){ %>
+            <% if (question.type_question != 'I' ) { %>
+            <option value="<%= question.slug %>"><%= question.name %></option>
+            <% } %>
+        <% }); %>
+        </select>
+    </div>
+</div>
+<div class="form-group required">
+    <label class="col-md-3 col-sm-3 col-xs-12 control-label" for="id_answers">Answers</label>
+    <div class="col-md-9 col-sm-9 col-xs-12">
+        <select class="form-control select2" id="id_answers" name="answers" required="required" title="" multiple tabindex="-1" aria-hidden="true" style="width: 100%" data-placeholder="Select one or more answers">
+        </select>
+    </div>
+</div>
+<button type="submit" class="btn btn-positive-choice admin">Save</button>

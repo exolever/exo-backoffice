@@ -1,0 +1,20 @@
+<table class='full-width'>
+    <tr>
+        <td style="width: 100px"><strong>Name:</strong></td>
+        <td><%= name  %>.<%= extension %></td>
+    </tr>
+    <% if (exo_project) { %>
+        <tr>
+            <td><strong>Project:</strong></td>
+            <td><%= exo_project_name %></td>
+        </tr>
+    <% } %>
+    <tr>
+        <td><strong>Folder:</strong> </td>
+        <td>Root<%= folder_path %></td>
+    </tr>
+    <tr>
+        <td><strong>Description:</strong></td>
+        <td><%= description %></td>
+    </tr>
+</table>

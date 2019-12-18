@@ -1,0 +1,28 @@
+<div class="form-group required">
+    <label class="control-label" for="id_file_name">File name</label>
+    <div class='row'>
+        <div class='col-md-10'>
+            <input type='text' name='file_name' maxlength="200" class='form-control' id='id_file_name' required="required" placeholder="File name" value="<%= file.name %>">
+        </div>
+        <div class='pull-left m-t-xs'>.<%= file.extension %></div>
+    </div>
+</div>
+<div class="form-group required">
+    <label class="control-label" for="id_folder">Folder: </label> <span id='folder_path'></span>
+    <% if (show_folder_select) { %>
+        <select class="form-control select2" id="id_folder" name="folder" data-placeholder="Choose a new folder to move the file" <% if (folder_required) { %>required="required"<% } %> >
+            <option>Loading data...</option>
+        </select>
+    <% } %>
+
+</div>
+<div class="form-group">
+    <label class="control-label" for="id_project">Select Initiative</label>
+    <select class="form-control select2" id="id_project" name="project" data-placeholder="Select an initiative">
+    <option></option>
+    </select>
+</div>
+<div class="form-group">
+    <label class="control-label" for="id_description">Description</label>
+    <textarea class="form-control" id="id_description" name="description" placeholder="Description" rows='5'><%= file.description %></textarea>
+</div>

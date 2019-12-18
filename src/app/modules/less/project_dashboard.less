@@ -1,0 +1,43 @@
+#dev__dashboard{
+    margin-top: 48px;
+    .ibox-content{
+        .col-flex-md-1:nth-child(2), .col-flex-md-1:first-child {
+            max-width: 40px;
+            flex-basis: 40px;
+        }
+        .col-flex-md-10 {
+            max-width: calc(~"100% - 77px");
+            flex-basis: calc(~"100% - 77px");
+            &.has-draggable{
+                max-width: calc(~"100% - 92px");
+                flex-basis: calc(~"100% - 92px");
+            }
+        }
+        .col-flex-md-1:last-child{
+            max-width: 37px;
+            flex-basis: 37px;
+        }
+    }
+    #dev__task_todo, #dev__recent_files {
+        &> li {
+            min-height: 67px;
+        }
+    }
+    .dev__channel_unread{
+        position: absolute;
+        right: 3px;
+        top: -6px;
+        padding: 4px 3px 2px 3px;
+    }
+    .ibox-title {
+        min-height: 86px;
+        padding-right: 16px !important;
+        &> h2 {
+            display: inline-block;
+            padding: 0;
+            text-overflow: ellipsis;
+            float: left;
+        }
+    }
+}
+

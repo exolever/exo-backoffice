@@ -1,0 +1,180 @@
+// ibox-tools
+
+#filter-actions {
+    &> a{
+        &:hover {
+            line-height: 20px;
+            border: none;
+            background: none;
+        }
+        &:active {
+            box-shadow: none;
+        }
+    }
+}
+
+.ibox-tools {
+    .icons-ibox-title {
+        a, .ibox-tools {
+            color: @clr-grey-700 !important;
+        }
+    }
+    p {
+        a {
+            font-size: 14px;
+            padding: 0;
+            margin: 0 !important;
+            &:hover {
+                border: 1px solid transparent;
+                color: @clr-orange-500 !important;
+                padding: 0px;
+            }
+        }
+    }
+    a {
+        margin: 0px !important;
+        line-height: 20px;
+        color: @clr-grey-700 !important;
+        border: 1px solid transparent;
+        padding: 5px 14px 5px 14px;
+        border-radius: 0px;
+        top: -19px;
+        left: 0px;
+        display: inline-block;
+        &.close-link-detail {
+            padding: 3px 8px 6px 8px;
+            margin-top: 2px !important;
+            &:hover {
+                border: 1px solid @clr-orange-500;
+                padding: 3px 8px 6px 8px;
+            }
+        }
+        &:focus {
+           background: transparent;
+        }
+        &:hover {
+            .hover-tools;
+            padding: 5px 14px 5px 14px;
+            line-height: 20px;
+        }
+    }
+}
+
+
+// ibox an details Cohort
+
+.box-detail-cohort {
+    padding: 15px;
+    margin: 10px 0px 20px 0px;
+    border-radius: 4px;
+}
+
+
+// for dropdown Surveys
+
+.ibox .ibox-tools.open > .dropdown-menu li ul {
+    padding-left: 0px;
+    li {
+        list-style: none;
+        a {
+            font-size: 12px;
+            width: 94%;
+            &:hover {
+                background: @clr-grey-100;
+                border: 1px solid transparent;
+                border-radius: 0px;
+            }
+        }
+    }
+}
+
+
+.ibox-content p.title-table-compare {
+    padding-left: 0;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+.ibox-title {
+     p a {
+        .hover-orange-td-and-first;
+    }
+    .title {
+        &.with-image{
+            width: calc(~"100% - 158px");
+        }
+        &.without-image{
+            width: calc(~"100% - 91px");
+            h3 {
+                .cut-text;
+            }
+        }
+        h3 {
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+.file .file-name {
+    .ibox-tools {
+        p {
+            a {
+                font-size: 14px;
+                padding: 0;
+                margin: 0 !important;
+                &:hover {
+                    border: 1px solid transparent;
+                    color: @clr-orange-500 !important;
+                    padding: 0;
+                }
+            }
+        }
+        a {
+            line-height: 20px;
+            color: @clr-grey-500;
+            border: 1px solid transparent;
+            padding: 4px 14px 4px 13px;
+            line-height: 20px;
+            border-radius: 0px;
+            top: -19px;
+            left: 0px;
+            margin: 0;
+            display: inline-block;
+            &.close-link-detail {
+                padding: 3px 10px 5px 10px;
+                margin-top: 1px !important;
+                &:hover {
+                    border: 1px solid @clr-orange-500;
+                    padding: 3px 10px 5px 10px;
+                }
+            }
+            &:focus {
+               background: transparent;
+            }
+            &:hover {
+                .hover-tools;
+                padding: 4px 14px 4px 13px;
+                line-height: 20px;
+            }
+        }
+        .dropdown-menu {
+                &> li > a {
+                    padding: 1px 0px 0px 5px !important;
+                    margin-bottom: 0px !important;
+                    line-height: 20px !important;
+                &:hover {
+                    border: none !important;
+                    border-radius: 0px !important;
+                    padding: 6px 10px !important;
+                    margin: 0px !important;
+                    line-height: 20px !important;
+                    width: 100%;
+                    background: @clr-grey-100;
+                    margin-bottom: -5px !important;
+                }
+            }
+        }
+    }
+}

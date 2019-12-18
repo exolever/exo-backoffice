@@ -1,0 +1,26 @@
+<div class="form-group required">
+    <label class="control-label" for="id_consultant">Select the consultants for generating the bio package:</label>
+    <select class="form-control select2" id="id_consultant" name="consultant" data-placeholder="Select the consultants" required="required" multiple="multiple">
+    </select>
+</div>
+
+<label>Drag & drop each field in order to be shown in bio package</label>
+<div class='row'>
+    <div class='col-md-6'>
+        <h4 class="text-center">Available fields</h4>
+        <ul id="availables" style="height: 300px;overflow-y: auto;" class="unstyled p-l-0 white-bg">
+            <% _.each(all_fields, function(value, index){ %>
+                <li data-field="<%= value.field %>" class='m-xs cursor-pointer'><%= value.label %></li>
+            <% }); %>
+        </ul>
+    </div>
+    <div class='col-md-6'>
+        <h4 class="text-center">Selected fields</h4>
+        <ul id="selected" style="height: 300px;overflow-y: auto;" class="unstyled p-l-0 white-bg">
+            <% _.each(table_detail, function(value, index){ %>
+                <li data-field="<%= value.field %>" class='m-xs cursor-pointer'><%= value.label %></li>
+            <% }); %>
+        </ul>
+    </div>
+    <div class='col-md-12'>Name, shortline, country and city will be always shown.</div>
+</div>

@@ -1,0 +1,24 @@
+.panel-title{
+    .line {
+        position: absolute;
+        top: 14px;
+        left: 120px;
+        width: calc(~"100% - 157px");
+        height: 1px;
+        background: @gray;
+    }
+    & > a:before {
+        float: right !important;
+        font-family: FontAwesome;
+        content:"\f077";
+        padding-right: 5px;
+    }
+    &  > a.collapsed:before {
+        float: right !important;
+        content: "\f078";
+    }
+    & > a:hover, & > a:active, & > a:focus  {
+        text-decoration:none;
+    }
+}
+

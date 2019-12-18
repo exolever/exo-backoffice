@@ -1,0 +1,16 @@
+<div class='pull-left full-width p-m-8 p-t-8 border-bottom simple-row'>
+    <div class='i-checks col-icon no-padding l-h-30 p-relative'>
+        <label>
+            <input type='checkbox' value='<%= id %>' name='resource-selected'> <i></i>
+        </label>
+    </div>
+    <div class='col-content no-padding cut-text m-t-sm'>
+        <% if(is_link) { %>
+        <i class="fa fa-link" aria-hidden="true"></i>
+        <% }; %>
+        <% if(is_file) { %>
+            <i class="fa fa-file" aria-hidden="true"></i>
+        <% }; %>
+        <strong> <%= name %></strong>
+    </div>
+</div>

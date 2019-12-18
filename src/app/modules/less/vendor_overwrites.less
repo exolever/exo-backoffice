@@ -1,0 +1,376 @@
+// Styles select
+
+
+// select 2
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 19px !important;
+    padding-left: 0px !important;
+}
+.select2-container .select2-selection--single {
+    min-height: 33px !important;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 1px;
+    color: @clr-grey-700;
+}
+.select2-container,.form-inline .input-group > .form-control,.select2-container {
+    width: 100%;
+}
+.select2-container {
+    // Select2 styles with button to create new Element using a Modal
+    &.select2-modal{
+        width: 85% !important;
+    }
+    &:not(.select2-modal){
+        width: 100% !important;
+    }
+    .select2-results {
+        span.select2-rendered__match{
+            font-weight: bold;
+        }
+    }
+    &:focus {
+        border-color: 2px solid @navy !important;
+    }
+}
+
+.select2-container .select2-search--inline {
+    width: 100%;
+    input {
+        width: 100% !important;
+    }
+}
+
+.select2-modal > div.select2-button{
+    width: 10%;
+    max-width: 140px;
+}
+
+.select2-container--open {
+   z-index: 99999;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow,
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    min-height: 33px !important;
+}
+.select2-container--default .select2-search--inline .select2-search__field {
+    margin-top: 7px !important;
+}
+.select2-container--default .select2-selection--single {
+    border: 1px solid @clr-grey-300 !important;
+    border-radius: 0px !important;
+    padding: 6px 12px;
+    height: auto;
+}
+.select2-container--default .select2-selection--single:focus,
+.select2-container:focus, .selection span:focus,
+span:focus,
+.form-control select2-hidden-accessible:focus {
+    border: 1px solid @navy !important;
+}
+
+
+// styles select 2 selection multiple
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: solid @clr-grey-300 1px !important;
+    border-radius: 0px;
+    padding: 0px 10px 0px 10px;
+}
+.select2-selection--multiple input {
+    margin-top: 0px !important;
+    border: none !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    padding: 0px;
+}
+.select2-container--default .select2-results__option[aria-selected=true],
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: @clr-grey-100 !important;
+    color: @clr-grey-700 !important;
+}
+
+
+// for calendar
+
+.datepicker {
+    z-index: 100000 !important;
+}
+
+
+// label warning
+
+.label-warning {
+    padding: 4px 6px 3px 6px !important;
+}
+
+
+// For modal
+// For icons
+.inmodal .modal-body {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.sweet-alert {
+    p {
+        color: inherit;
+        font-size: 14px;
+        font-family: inherit;
+        font-weight: 500;
+        position: relative;
+        text-align: inherit;
+        float: none;
+        margin: 0;
+        padding: 0;
+        line-height: normal;
+    }
+    button.confirm {
+        .btn-positive-choice;
+    }
+    button.cancel {
+        .btn-default;
+        &:hover, &:active:hover, &:active {
+            border: 1px solid @clr-grey-300;
+            background-color: @clr-grey-200;
+            color: inherit;
+        }
+    }
+    .pulseWarning {
+      -webkit-animation: none;
+      animation: none;
+    }
+    .pulseWarningIns {
+      -webkit-animation: none;
+      animation: none;
+    }
+    .sa-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .sa-icon.sa-warning {
+        border-color: @clr-grey-600;
+        .sa-body {
+            background-color: @clr-grey-600;
+            width: 7px;
+            height: 25px;
+            left: 48%;
+            top: 8px;
+        }
+        .sa-dot {
+            background-color: @clr-grey-600;
+            width: 7px;
+            height: 7px;
+            top: 36px;
+        }
+    }
+}
+
+
+// for user profile form
+.editable-empty, .editable-empty:hover, .editable-empty:focus {
+    font-style: normal;
+    color: @clr-grey-700;
+    text-decoration: none !important;
+}
+
+.editable-click, a.editable-click, a.editable-click:hover {
+    text-decoration: none;
+    border-bottom: 0px;
+    color: @clr-grey-500;
+    font-style: italic;
+    width: 100%;
+    &.with-value{
+        color: @text-color;
+        font-style: normal;
+    }
+}
+a.editable-click:nth-child(2) {
+    float:left;
+}
+
+#user_data {
+    span.select2.select2-container.select2-container--default.select2-container--focus {
+        width: 100%;
+        float: left;
+    }
+}
+
+// stars rating
+.rating-xs {
+    font-size: 14px;
+}
+.rating-container {
+    text-align: right;
+    vertical-align: bottom;
+    .filled-stars {
+        color: @clr-grey-600;
+        text-shadow: none;
+        &.rating_star_yellow{
+            color: @exo-color-rating-star-yellow;
+        }
+    }
+    .rating {
+        line-height: 10px;
+    }
+
+}
+
+// ********************************************
+// XEditable jQuery
+// ********************************************
+
+// Container for XEditable data
+
+.editable-input {
+    width: calc(~"100% - 72px");
+    input {
+        background: @clr-grey-50;
+        height: @button-default-height;
+        width: @button-default-min-width;
+    }
+    textarea {
+        width: 100% !important;
+    }
+}
+
+.editable-buttons {
+    margin-left: 0px !important;
+    .btn {
+        border-radius: 0px;
+        padding: 6px 7px 7px;
+        background: @clr-white-list;
+        border: 1px solid @clr-grey-300 !important;
+        font-size: 20px;
+        vertical-align: middle;
+        line-height: 0px;
+        border: 1px solid @clr-grey-500;
+        &.editable-submit {
+            background: @clr-white-list !important;
+            i {
+                color: @clr-green-500 !important;
+            }
+        }
+        &.editable-cancel  {
+            color: @clr-grey-500 !important;
+            margin-left: 0px;
+        }
+    }
+}
+
+// ********************************************
+// Toast
+// ********************************************
+
+#toast-container {
+    line-height: 26px;
+    & > div {
+        padding: 18px 15px 15px 50px;
+    }
+}
+button.toast-close-button {
+    line-height: 26px;
+    margin: 5px 5px 0px 0px;
+}
+.toast-message {
+    margin-left: 5px;
+}
+
+
+// Fot selec time slot
+.block-select-time-slot {
+    background: @clr-white-list;
+    border: 1px solid @clr-grey-300;
+    border-radius: 4px;
+    padding: 0px 10px 4px 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+// For Files
+.search-file {
+    .select2-container--default .select2-results__option--highlighted[aria-selected],
+    .select2-results__option {
+        background-color: @clr-grey-100;
+        color: @clr-grey-700 !important;
+        .bordered(bottom);
+        &:hover {
+            background-color: @clr-grey-200;
+            .orange;
+        }
+    }
+}
+
+
+// For Resources form
+.select2-container--default .select2-selection--multiple {
+    background-color: @clr-white-list !important;
+    border: 1px solid @clr-grey-300 !important;
+    border-radius: 0px !important;
+}
+
+.dropdown-menu-right .dropdown-submenu > a:after, .navbar-right .dropdown-submenu > a:after {
+    float: right;
+    margin-left: 0px;
+    margin-right: 10px;
+    margin-top: 8px;
+    border-left: none;
+}
+
+
+/* SUBMENU */
+
+.dropdown-submenu > a:after {
+    margin-top: 8px;
+}
+
+.dropdown-submenu > a:hover:after{
+    margin-top: 6px;
+    color: #9e9e9e;
+}
+
+.open .dropdown-toggle.btn-default {
+    background: none;
+    border: none;
+}
+
+.btn {
+    height: 34px;
+    min-width: 34px;
+}
+
+.md-editor {
+    &>textarea{
+        padding: 5px;
+    }
+    .md-preview{
+        padding: 5px;
+        li{
+            list-style-position: inside !important;
+            list-style-type: disc !important;
+        }
+    }
+}
+
+.dropdown-backdrop {
+    display: none;
+}
+
+.irs-from, .irs-to, .irs-single {
+    background: @orange-exo;
+}
+
+.irs-from:after, .irs-to:after, .irs-single:after {
+    border-top-color: @orange-exo;
+}
+
+.ladda-button:hover {
+    background: inherit;
+}
+
+.datetimepicker {
+    z-index: 9999999;
+}

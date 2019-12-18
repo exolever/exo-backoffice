@@ -1,0 +1,82 @@
+<div class='row' id='dev__step1'>
+    <div class='col-md-12'>
+        <div class='btn btn-default orange border-orange full-width' id="dev__new_resource">
+            <i class="fa fa-plus-square-o" aria-hidden="true"></i> New resource
+        </div>
+    </div>
+    <div class='col-md-12 m-t-md'>
+        Or, select resources from library:
+        <div class='full-width pull-left' id='dev__resources_general' style="max-height: 300px; overflow-y: auto;"></div>
+    </div>
+</div>
+<div class='row' id='dev__step2' style='display:none'>
+    <div id="dev__back_to_library" class='m-t-xs m-b-md cursor-pointer'> < back to library</div>
+    <div class="tabs-container">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a data-toggle="tab" href="#file">
+                    <i class="fa fa-file" aria-hidden="true"></i>Add file
+                </a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#link">
+                    <i class="fa fa-link" aria-hidden="true"></i>Add link
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="file" class="tab-pane active">
+                <div class="panel-body">
+                    <div class="col-xs-12 no-padding m-t-8">
+                        <div class="form-group required">
+                            <label class="control-label" for="id_file_name">Name</label>
+                            <input type='text' name='file_name' maxlength="200" class='form-control' id='id_file_name' required="required" placeholder="Resource name">
+                        </div>
+                    </div>
+                    <div class='col-xs-12 no-padding m-t-8 folder-list'>
+                        <div class="form-group required">
+                            <label class="control-label">File</label> <strong><span id="dev__filename"></span></strong>
+                        </div>
+                        <div class='file-box' id='box-upload-file'>
+                            <div id="progress" class="progress hide">
+                                <div class="progress-bar progress-bar-success" style="width: 0%;"></div>
+                            </div>
+                            <div class='file col-xs-12'>
+                                <div class="btn btn-block fileinput-button file-name no-padding" id='upload-file'>
+                                    <div class="col-xs-12 p-m file-name no-top-border">
+                                        <span class="">
+                                            Drop file here<br>
+                                            or<br>
+                                            click the button<br>
+                                        </span>
+                                    </div>
+                                    <!-- The file input field used as target for the file upload widget -->
+                                    <div class="col-xs-12 p-t-20 p-b-20" id='dev__btn_file'>
+                                        <button class='btn btn-default'>
+                                            <input id="fileupload" type="file" name="file" >
+                                            Upload file
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="link" class="tab-pane">
+                <div class="panel-body">
+                    <div class="col-xs-12 no-padding m-t-8">
+                        <div class="form-group required">
+                            <label class="control-label" for="id_link_name">Name</label>
+                            <input type='text' name='link_name' maxlength="200" class='form-control' id='id_link_name' required="required" placeholder="Resource name">
+                        </div>
+                        <div class="form-group required">
+                            <label class="control-label" for="id_link">Link</label>
+                            <input type='text' name='link' maxlength="200" class='form-control' id='id_link' required="required" placeholder="http://...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

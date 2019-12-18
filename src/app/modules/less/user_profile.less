@@ -1,0 +1,172 @@
+div#profile-image-edit-container {
+    &{
+        width: 108px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 108px;
+        text-align: left;
+    }
+    &:hover{
+
+    }
+    div{
+        &#update_profile_image{
+            position: absolute;
+            float: left;
+            z-index: 1000;
+            min-width: 108px;
+            min-height: 108px;
+            opacity: 0;
+            filter: alpha(opacity=0); /* For IE8 and earlier */
+            &:hover{
+                opacity: 1;
+                filter: alpha(opacity=1); /* For IE8 and earlier */
+                cursor: pointer;
+            }
+            .img-user {
+                border-radius: 100px;
+                padding: 40px 9px 54px 10px;
+                margin-top: 6px;
+                opacity: .9;
+                font-size: 12px;
+            }
+        }
+    }
+    img{
+        margin-top: 6px;
+        max-width: 96px;
+    }
+}
+
+
+// bage - Type - Rol
+.badge {
+    &.skills {
+        &.project-manager, &.badge-rol-c, &.badge-rol-x, &.badge-rol-s, &.badge-rol-t, &.badge-rol-i, &.badge-rol-m {
+            padding: 5px 12px;
+            border-radius: 4px;
+        }
+    }
+    color: @clr-white-list !important;
+    // Rol Collaborator
+    &.badge-rol-c {
+        background: @clr-indigo-400;
+    }
+    // Rol Coach
+    &.badge-rol-x {
+        background: @clr-purple-200;
+    }
+    // Rol Instructor
+    &.badge-rol-i {
+        background: @clr-pink-300;
+    }
+    // Rol Disruptor
+    &.badge-rol-d {
+        background: @clr-amber-300;
+    }
+    // Rol ProjectManager
+    &.badge-rol-m {
+        background: @clr-red-400;
+    }
+    // Rol Speaker
+    &.badge-rol-s {
+        background: @clr-light-green-500;
+    }
+    // Rol Consultant, Rol Trainer
+    &.badge-rol-t {
+        background: @clr-deep-purple-400;
+    }
+}
+
+/* Rol
+ rol-c    # Collaborator
+ rol-x    # Coach
+ rol-t    # Consultant
+ rol-s    # Speaker
+ rol-s    # Consultant
+ */
+
+#user_data {
+    p {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+#edit-profile{
+    .radio label, .checkbox label {
+        padding-left: 0px;
+    }
+    .i-checks div {
+        margin-top: 0px !important;
+        margin-bottom: 5px !important;
+    }
+}
+
+// for content simple data
+.cont-simple-data {
+    &> div:first-child {
+        width: 75px;
+    }
+    &> div:nth-child(2) {
+        width: calc(~"100% - 75px");
+    }
+}
+
+// for content simple data (customer profile)
+.customer-profile {
+    .cont-simple-data {
+        &> div:first-child {
+            width: 120px;
+        }
+        &> div:nth-child(2) {
+            width: calc(~"100% - 120px");
+        }
+    }
+}
+
+
+
+// for editable
+.editable-container {
+    &.editable-inline {
+        margin-top: -8px;
+        width: 100%;
+    }
+    .control-group.form-group{
+        width: 100%;
+        max-width: 307px;
+    }
+}
+.editable-input input {
+    &.form-control {
+        width: 100%;
+    }
+
+}
+
+.container-textarea-editable .control-group {
+    max-width: none !important;
+}
+
+
+.link-user {
+    .media-body {
+        width: calc(~"100% - 42px");
+    }
+}
+.project-timeline{
+    margin-left: 0px !important;
+    .ball{
+        border-radius: 100%;
+        padding: 5px 0px 6px 4px !important;
+        line-height: 18px;
+        margin-top: -4px;
+        width: 30px;
+        height: 30px;
+        background: #e0e0e0;
+        &.current{
+            border: 2px solid black;
+        }
+    }
+}

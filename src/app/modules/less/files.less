@@ -1,0 +1,183 @@
+// Styles for files
+
+#file-name {
+    width: 100%;
+}
+
+.folder-list {
+    width: 100%;
+    display: inline-block;
+    padding: 3px;
+    border-bottom: 0px;
+    li {
+        width: 100%;
+        display: inline-block;
+        padding: 2px;
+        i   {
+            a {
+                padding: 10px 0;
+                color: inherit;
+                font-size: 24px;
+                &:hover {
+                    .hover-tools;
+                }
+            }
+            color: inherit;
+            font-size: 20px;
+        }
+        a {
+            &:active{
+                background: transparent;
+            }
+            &.dropdown-toggle {
+                padding: 6px 4px 4px 14px;
+                text-align: center;
+                margin-top: 1px !important;
+                border: 1px solid transparent;
+                display: inline-block;
+                top: -19px;
+                left: 0px;
+                &:hover {
+                    border: 1px solid @clr-orange-500;
+                    color: @clr-orange-500;
+                    border-radius: 50%;
+                    padding: 6px 4px 4px 14px;
+                }
+            }
+            &.n-cut-text {
+                width: auto !important;
+            }
+            .cut-text;
+        }
+        .dropdown-menu {
+            li {
+                a {
+                    margin: 0px !important;
+                    border-radius: 0px;
+                    padding: 5px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .dropdown-menu {
+        & > li {
+            &> a:hover {
+                margin: 0px!important;
+                padding: 7px 6px 6px 5px;
+            }
+        }
+   }
+   .file > .btn {
+        height: auto;
+   }
+}
+
+
+#file-area-container {
+    .file-box {
+        margin-right: 26px;
+        width: 30%;
+        min-width: 238px;
+    }
+}
+
+.file-manager {
+    float: left;
+    width: 100%;
+    cursor: pointer;
+    .fa {
+        &.plus {
+            text-align: center;
+            font-size: 24px;
+            margin-left: 2px;
+        }
+        font-size: 20px;
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+.file-control {
+    font-size: 12px !important;
+    border-right: 1px solid @clr-grey-300;
+    padding-right: 5px;
+}
+
+#list-files {
+    padding: 10px;
+    border: 1px solid @border-color;
+    background: @clr-white-list;
+    border-radius: 4px;
+    padding-bottom: 35px;
+    div {
+        padding: 5px;
+        display: inline-block;
+        &.i-checks {
+            label {
+                margin-bottom: -5px;
+                &:after  {
+                    content: "";
+                    float: left;
+                }
+            }
+            width: 100%;
+        }
+        &.icheckbox_square-orange {
+            margin: 0px 10px 0px 0px !important;
+        }
+    }
+    .fa {
+        margin-right: 10px;
+        font-size: 20px;
+        vertical-align: middle;
+    }
+}
+
+
+// For resources files
+
+#resource-list {
+    width: 100%;
+    div:nth-child(2) {
+        font-size: 12px;
+        font-weight: normal;
+    }
+}
+
+
+// For file-list
+#file-list {
+    margin-top: 17px;
+    a {
+        .color-table-hover;
+        &:hover {
+            color: @clr-orange-500 !important;
+        }
+    }
+}
+
+#file-area-header {
+    .dropdown-breadcrumb a{
+        font-size: @exo-font-size !important;
+    }
+    h2 {
+        a {
+            vertical-align: middle;
+            line-height: 26px;
+            &:hover {
+                .orange;
+            }
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+    #form-search-file {
+        span.select2-selection__placeholder {
+            font-size: @exo-font-size;
+            line-height: 22px;
+            color: @clr-grey-500;
+        }
+    }
+}

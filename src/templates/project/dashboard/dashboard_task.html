@@ -1,0 +1,45 @@
+<div class="row-flex flex-items-xs-middle p-t-10 p-b-10 m-r m-l">
+    <div class='p-relative col-flex-md-1' title='Mark as done'>
+        <input type='checkbox' id='id_<%= id %>_done' class='ichecks dev__deliver' title="Mark as done" >
+    </div>
+     <div  class='col-flex-md-10 <% if(!is_draggable) { %>has-draggable<% }; %>'>
+        <p class="cut-text m-b-none"><a href="#" class="dev__show_task text-default"><strong><%= title  %></strong></a></p>
+        <% if (show_project || has_to_show_team) { %>
+            <p class="font-little m-t-xs m-b-xs  cut-text">
+            <% if(show_project) { %>
+                <%= project_name %> <% if (has_to_show_team) { %> - <% } %>
+            <% }; %>
+            <% if (has_to_show_team) { %>
+                <%= team_name %>
+            <% } %>
+            </p>
+        <% } %>
+        <% if ((assigned_to.length > 0) && (_.isNull(assigned_to[0].object_role))) { %>
+            <span class='label font-little' title="Team Task"><i class="fa fa-users media-t-bas"></i></span>
+        <% }; %>
+        <% if (files.length > 0 ) { %>
+            <span class="label font-little" title="Files"><i class="fa fa-paperclip media-t-bas"></i> <%= files.length %></span>
+        <% }; %>
+        <% if (due_date) { %>
+            <span class="label font-little"  title="Due date"><i class="fa fa-clock-o media-t-bas"></i> <%= due_date %></span>
+        <% }; %>
+    </div>
+    <div class="col-flex-md-1">
+        <div class="ibox-tools">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-ellipsis-v"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <% if (perms.can_edit) { %>
+                    <li><a href="<%= urls.edit %>">Edit</a></li>
+                <% }; %>
+                <% if (perms.can_remove) { %>
+                    <li><a href="<%= urls.remove %>">Remove</a></li>
+                <% }; %>
+                <% if (perms.can_deliver) { %>
+                    <li><a class="dev__deliver">Mark as done</a></li>
+                <% }; %>
+            </ul>
+        </div>
+    </div>
+</div>

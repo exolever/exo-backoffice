@@ -1,0 +1,326 @@
+// Styles all list for tables
+// For icons table and dropdown
+
+table {
+    .color-table-hover;
+}
+table.list-detail tr:hover {
+    cursor: pointer;
+}
+
+table.list-detail tr.active {
+    background: @clr-grey-400;
+}
+
+.table-striped a {
+	.color-table-hover;
+}
+
+.table-responsive {
+    background: @clr-white-list;
+    min-height: .01%;
+    height: 100% !important;
+    overflow: visible;
+}
+
+.table > thead:first-child > tr:first-child > th {
+    cursor: auto;
+    text-align: left;
+}
+
+// hover for different list
+
+// for Sprints
+.table.sprints > tbody > tr > td a {
+    &:active {
+        background: transparent;
+    }
+}
+.table.sprints > tbody > tr > td:first-child:hover {
+    color: @clr-grey-700;
+}
+
+// for Customer
+// for Sprints
+// for Surveys
+// for Replies
+// for Cohorts
+// for Sprint settings - ExO - List
+// for table Team
+// for Projects
+// for Project
+// for Network
+// for table-mail
+// for ranking
+.table.table-team > tbody > tr > td,
+.table.projects > tbody > tr > td,
+.table.cohorts > tbody > tr > td,
+.table.survey > tbody > tr > td,
+.table.table-mail > tbody > tr > td,
+.table.network > tbody > tr > td,
+.table.replies > tbody > tr > td,
+.table.customer > tbody > tr > td,
+.table.resource > tbody > tr > td,
+.table.ranking > tbody > tr > td,
+.table.default > tbody > tr > td {
+    &:first-child {
+        padding-left: 5px;
+        text-align: left;
+    }
+    &.team-members {
+        padding-left: 0px !important;
+        text-align: left;
+    }
+    &.project {
+        padding-left: 5px !important;
+    }
+    text-align: left;
+    line-height: 40px;
+}
+#information .table.table-detail-right > tbody > tr > th,
+#information .table.table-detail-right > tbody > tr > td {
+    padding: 8px 0px;
+}
+.table.table-team > tbody > tr > td:first-child a {
+    .color-table-hover;
+}
+.table.survey > tbody > tr > td:first-child a:hover {
+    color: @clr-orange-500;
+}
+.table.survey > tbody > tr > td:nth-child(2):hover,
+.table.replies > tbody > tr > td:nth-child(2):hover,
+.table.cohorts > tbody > tr > td:nth-child(2):hover,
+.table.exo-list > tbody > tr > td:nth-child(2):hover,
+.table.sprints > tbody > tr > td:nth-child(2):hover,
+.table.customer > tbody > tr > td:nth-child(2):hover,
+.table.table-team > tbody > tr > td:nth-child(2):hover,
+.table.projects >tbody>tr>td:nth-child(2):hover,
+.table.project > tbody > tr > td:nth-child(2):hover,
+.table.resource > tbody > tr > td:nth-child(2):hover,
+.table.table-mail > tbody > tr > td:nth-child(2):hover,
+.table.table-mail > tbody > tr > td:first-child,
+.table.table-mail > tbody > tr > td:first-child:hover {
+    .color-table-hover;
+}
+
+
+// for table Team
+table.table-mail tr, table.table-mail tr td {
+    cursor: auto;
+}
+.table.table-team > tbody > tr > td a,
+.table.table-team > tbody > tr > td a:hover,
+table.table-mail tr td div,
+table.table-mail tr td:first-child {
+        color: @clr-orange-500;
+}
+
+
+// for table mail
+.table.table-mail > tbody > tr > td {
+    &:first-child {
+        padding-left: 10px;
+        div {
+            .color-table-hover;
+            font-weight: bold;
+            font-size: @exo-font-size;
+        }
+    }
+}
+
+//For company rankings
+.table.company-rankings > tbody > tr > td {
+    line-height: 35px !important;
+}
+
+
+// Styles for icons table
+
+.table.table-mail {
+    & > tbody > tr > td i.fa {
+        font-size: 24px !important;
+        color: @clr-grey-600 !important;
+        cursor: pointer;
+    }
+}
+.table.table-striped.list-detail > tbody > tr > td a i {
+    &.fa {
+        font-size: 20px !important;
+    }
+    &:hover {
+        color: @clr-orange-500 !important;
+    }
+}
+
+table.table.table-mail > thead:first-child > tr:first-child > th {
+    padding: 12px;
+}
+table.table-mail tr td {
+    padding: 12px;
+}
+table.table-team tr td {
+    &.team-members {
+        padding-left: 0px;
+        text-align: center;
+    }
+    &.project {
+        padding-left: 20px;
+    }
+}
+
+.table > tbody > tr > td {
+    .ibox-tools a:hover {
+        color: @clr-orange-500 !important;
+    }
+    line-height: 20px;
+}
+
+
+// For table-detail-right
+.table.table-detail-right > tbody > tr {
+    & > th, & > td {
+        text-align: left;
+    }
+    & > th {
+        padding: 8px 0px 8px 0px;
+    }
+    & > td {
+        padding: 8px 0px 8px 8px;
+        border-top: 0 !important;
+    }
+}
+// Cohorts
+.table.table-detail-right {
+    margin-top: 7px;
+    i {
+        .color-table-hover;
+        font-size: 20px !important;
+    }
+    &.cohort > thead > tr > th {
+        padding: 4px 0px;
+    }
+    &.cohort > tbody > tr {
+        & > th {
+            padding: 15px 0px 5px 0px;
+            .border-bottom;
+            text-align: left;
+        }
+        & > td {
+            .n-b-bottom;
+            padding: 2px 0px;
+            text-align: left;
+        }
+    }
+    border-collapse: collapse;
+    &.table-bordered > tbody > tr > td {
+        width: 50%;
+        padding: 10px;
+    }
+    & > tbody > tr > td:nth-child(2):hover {
+        color: @clr-grey-700 !important;
+    }
+    & > thead > tr > th {
+        padding:10px;
+    }
+}
+
+
+
+// Pagination table
+
+.pagination {
+    a {
+       .padding-pagination;
+    }
+    span {
+        .padding-pagination;
+        .n-border-n-backg;
+    }
+    & > .active {
+        & > a, & > span {
+            color: @clr-grey-500 !important;
+            border: 1px solid @clr-grey-200 !important;
+            border-radius: 0px !important;
+            &:hover {
+                color: @clr-orange-500 !important;
+            }
+        }
+    }
+
+    & > li {
+        & > a {
+            border: 1px solid transparent !important;
+            background: transparent !important;
+            &:hover {
+                .n-border-n-backg;
+                .hover-orange-td-and-first;
+            }
+        }
+    }
+}
+
+
+// for table compare results
+.box-table {
+    .box-white;
+    margin: -20px -20px 40px -20px !important;
+}
+.th-background {
+  .box-light-grey;
+}
+.td-background {
+  .box-m-light-grey;
+}
+.td-background-pad {
+ .box-m-light-grey-td;
+}
+.td-pad {
+ .box-m-light-grey-td-2;
+}
+
+
+// For table user
+// project user
+// ranking
+.table.project-user > tbody > tr > td,
+.table.ranking {
+    & > tbody > tr {
+            & > td {
+                &:first-child, &:nth-child(2) {
+                    text-align: left;
+                }
+                border-top: 0px !important;
+                vertical-align: bottom;
+            }
+            &.data {
+                td {
+                    border: 0px;
+                    padding-bottom: 0px;
+                    padding-top: 0px;
+                    width: 33%;
+                    padding-left: 0;
+                    &:nth-child(2) {
+                        .color-table-hover;
+                    }
+                }
+            }
+        }
+        & > td {
+            &:first-child {
+                text-align: left;
+            }
+        text-align: left;
+    }
+}
+.table.project-user > tbody > tr > td {
+    &:first-child {
+        text-align: left;
+    }
+    &:nth-child(2):hover {
+        .color-table-hover;
+    }
+}
+
+.table > .ui-sortable > .draggable > td > a{
+    background-position-y: 3px;
+}

@@ -1,0 +1,85 @@
+div{
+    &.consultant_details{
+        div{
+            &.invitation{
+                .description {
+                    width: calc(~"100% - 23px");
+                    .title {
+                        text-transform: uppercase;
+                        font-size: 14px;
+                    }
+                    .subtitle {
+                        font-size: 12px;
+                    }
+                }
+            }
+            // Validation Notification Sent
+            &.invitation_status_P {
+                .indicated-box;
+            }
+
+            &#skills{
+                a.btn-edit-profile{
+                    display: none;
+                }
+                div{
+                    &.content-exo-attributes{
+                        &> .col-md-6:nth-child(2){
+                            .border-left;
+                        }
+                        &> .col-md-6 {
+                            .no-margins;
+                            .no-padding;
+                            &> .row{
+                                .no-margins;
+                            }
+                        }
+                        div{
+                            &.row{
+                                .p-xxs;
+                                .p-r-none;
+                                .border-bottom;
+                            }
+                            &.attr-name{
+                                width: 70% !important;
+                                .no-padding;
+                                .cut-text;
+                            }
+                            &.attr-value{
+                                width: 30% !important;
+                                .no-padding;
+                                .text-right;
+                                input{
+                                    height: 18px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                input{
+                    &.rating-loading{
+                        font-size: 13px !important;
+                        color: @text-color !important;
+                        background: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#consultant_form{
+    .checkbox label {
+        padding-left: 0px;
+    }
+}
+
+ul#selected {
+    li{
+        &.fixed{
+            color: @clr-grey-400;
+            font-style: italic;
+        }
+    }
+}

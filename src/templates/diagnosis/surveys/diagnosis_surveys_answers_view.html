@@ -1,0 +1,11 @@
+ <% _.each(sections, function(section) { %>
+    <div class="section_title p-m p-t-none">
+        <h2 class="border-bottom p-b-5 m-t-sm" style="color: #78909C;"><%= section.name %></h2>
+        <% _.each(section.questions, function(question){ %>
+            <div class="row m-b-sm">
+                <div class="col-md-10"><%= question.name %></div>
+                <div class="col-md-2"><%= question.value %></div>
+            </div>
+        <% }); %>
+    </div>
+<% }); %>

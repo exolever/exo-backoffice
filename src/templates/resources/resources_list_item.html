@@ -1,0 +1,31 @@
+<div class='p-m-10 p-t-10 border-bottom row dev__resource__<%= id %>'>
+    <div class='col-lg-1 col-xs-2'>
+         <% if(is_link) { %>
+            <i class="fa fa-link" aria-hidden="true"></i>
+        <% }; %>
+        <% if(is_file) { %>
+            <i class="fa fa-file" aria-hidden="true"></i>
+        <% }; %>
+    </div>
+    <div class='col-lg-5 col-xs-4'><%= name %></div>
+    <div class='col-lg-5 col-xs-4'><a href="<%= link %>" target="_blank"><%= link %></a></div>
+    <div class='col-lg-1 col-xs-2 text-center'>
+        <div class="ibox-tools pull-right l-h-34 text-center" style="margin-top:-10px;">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-ellipsis-v"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                <% if(is_link) { %>
+                    <a href="<%= link %>" target="_blank">See link</a>
+                <% }; %>
+                <% if(is_file) { %>
+                    <a href="<%= url %>" target="_blank">Download</a>
+                <% }; %>
+                </li>
+                <li><a href="" class="dev__remove" data-pk="<%= id %>" data-slug="<%= slug %>">Remove</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+#feedback_container{
+    position: fixed;
+    bottom: -304px;
+    right: 50px;
+    width: 250px;
+    margin-bottom: 0px;
+    z-index: 100;
+    &.open{
+        bottom: 0px;
+    }
+    border-right: 1px solid @border-color;
+    .box-shadow(-2px -1px 4px -1px rgba(0,0,0,0.25));
+}

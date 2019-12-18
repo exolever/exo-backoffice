@@ -1,0 +1,28 @@
+<div class='col-icon no-padding l-h-30'>
+    <i class="fa fa-<%= file_type %>"></i>
+</div>
+<div class="col-content no-padding cut-text">
+    <strong>
+        <a href="<%= file_url %>" target='_blank'>
+            <%= name %>.<%= extension %>
+        </a>
+    </strong>
+    <div class="pull-left full-width cut-text d-i-block no-padding small" title="<%= folder_path %>">
+        <%= folder_path %>
+    </div>
+</div>
+<div class="ibox-tools col-actions">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <i class="fa fa-ellipsis-v"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-user">
+        <li>
+            <a href="<%= file_url %>" target='_blank'>Download</a>
+        </li>
+        <% if (permissions) { %>
+            <li>
+                <a href="#" class='remove-file'>Remove</a>
+            </li>
+        <% } %>
+    </ul>
+</div>

@@ -1,0 +1,32 @@
+<div class="file col-xs-12">
+    <a href="<%= file_url %>" target='_blank'>
+        <span class="corner"></span>
+       <div class="icon">
+            <i class="fa fa-<%= file_type %>"></i>
+        </div>
+    </a>
+    <div id="file-name" class="file-name col-xs-12 dropdown">
+        <div class='col-md-10 p-l-0'>
+            <%= name %>.<%= extension %>
+            <br/>
+            <small><%= created_by %></small>
+            <% if (description) { %>
+                <br><small><%= description %></small>
+            <% } %>
+        </div>
+        <div class='col-md-2 no-padding t-a-center'>
+            <div class="ibox-tools pull-right">
+                <a class="dropdown-toggle m-r-none" data-toggle="dropdown" href="#">
+                    <i class="fa fa-ellipsis-v"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <% if (write) { %>
+                        <li><a href="#" class='edit-file'>Edit</a></li>
+                        <li><a href="#" class='remove-file'>Remove</a></li>
+                    <% } %>
+                    <li><a href="<%= file_url %>" target='_blank'>Download</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

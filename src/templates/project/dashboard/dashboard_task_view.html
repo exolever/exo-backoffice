@@ -1,0 +1,42 @@
+<table class='full-width'>
+    <tr>
+        <td style="width: 100px"><strong>Title:</strong></td>
+        <td><%= title %></td>
+    </tr>
+    <tr>
+        <td><strong>Description:</strong></td>
+        <td><%= description %></td>
+    </tr>
+    <% if(due_date) { %>
+        <tr>
+            <td><strong>Due date:</strong></td>
+            <td><%= due_date %></td>
+        </tr>
+    <% }; %>
+    <tr>
+        <td><strong>Status:</strong> </td>
+        <td><%= status_display %></td>
+    </tr>
+    <tr>
+        <td><strong>Assigned to:</strong></td>
+        <td><%= assigned_to[0].object_str %></td>
+    </tr>
+    <tr>
+        <td><strong>Files:</strong></td>
+        <td>
+            <% if(files.length) { %>
+                <ul class="m-t-10 p-l-15">
+                <% files.each(function(file){ %>
+                    <li>
+                        <a href="<%= file.get('url') %>" target="_blank" class="text-default">
+                            <i class="fa fa-<%= file.get('file_type') %>"></i> <%= file.get('name') %>.<%= file.get('extension') %>
+                        </a>
+                    </li>
+                <% }); %>
+                </ul>
+            <% } else { %>
+                No files related
+            <% } %>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,14 @@
+<div class="form-group required">
+    <label class="control-label" for="id_date"><%= label %></label>
+    <input class="form-control" id="id_date" name="date" placeholder="<%= label %>" title="Date" type="text" value="<%= date %>">
+</div>
+<% if (badges) { %>
+<div class="form-group">
+    <div class='i-checks m-t-none block-select-time-slot'>
+        <label>
+            <input type='checkbox' name='badges' id="id_badges"> <i></i>
+            <div class="media-middle d-inline data">Confirm badges for all consultants</div>
+        </label>
+    </div>
+</div>
+<% }; %>

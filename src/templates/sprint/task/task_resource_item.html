@@ -1,0 +1,18 @@
+<td>
+    <div class='pull-left'>
+        <div class="icon d-inline m-r-sm col-xs-1">
+            <i class="fa fa-<%= file_type %>"></i>
+        </div>
+    </div>
+    <div>
+        <div class="d-inline col-xs-10 no-padding">
+            <%= name %>.<%= extension %>
+        </div>
+        <div class="clearfix d-i-block col-xs-10 no-padding">
+            <%= folder_path %>
+        </div>
+    </div>
+    <div class='pull-right'>
+        <i class="fa fa-trash delete pull-right l-h-0" data-pk="<%= id %>"></i>
+    </div>
+</td>

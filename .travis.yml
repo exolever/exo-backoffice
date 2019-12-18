@@ -1,0 +1,13 @@
+# Simplified pipeline for travis
+---
+language: ruby
+
+services:
+  - docker
+
+script:
+  - echo $DOCKER_HUB_PASSWORD | docker login --username $DOCKER_HUB_USERNAME --password-stdin
+  - export IMAGE_NAME=exolever/exo-backoffice
+  - export SOURCE_BRANCH=$(echo $TRAVIS_BRANCH | sed "s/\//_/g")
+  - docker build --tag $IMAGE_NAME:$SOURCE_BRANCH .
+  - docker push $IMAGE_NAME:$SOURCE_BRANCH

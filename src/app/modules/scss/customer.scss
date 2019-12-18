@@ -1,0 +1,54 @@
+@mixin last-row-flexbox($num-columns, $width-items){
+
+  //Vamos a calcular el espacio que queda entre los elementos para usarlo de márgen en los sueltos.
+  $filled-space: $width-items * $num-columns;
+  $margin: calc((100% - #{$filled-space}) / (#{$num-columns} - 1));
+
+  $num-cols-1 : $num-columns - 1;
+
+  //Establezco el ancho.s
+  width: $width-items;
+  //Damos el margen izquierdo a todos los elementos sueltos menos al primero.
+  margin-left: calc(#{$margin} / 2);
+  margin-right: calc(#{$margin} / 2);
+
+  &:nth-child(#{$num-columns}n + 5){
+    margin-right: 0;
+  }
+  &:nth-child(#{$num-columns}n + 1){
+    margin-left: 0;
+  }
+}
+
+#customer-form{
+    .radio label, .checkbox label {
+        padding-left: 0px !important;
+    }
+}
+
+$width: 19%;
+$cols: 5;
+
+.members-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    & > div.item-user{
+        @media (max-width: 992px) {
+            width: 100%;
+            margin-left: 0px !important;
+            margin-right: 0px;
+        }
+
+        @include last-row-flexbox($cols, $width);
+
+    }
+    &:after{
+      content: "";
+      flex: auto;
+    }
+}
+

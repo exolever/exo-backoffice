@@ -1,0 +1,23 @@
+<h2 class='StepTitle'><%= name %></h2>
+<form class="form-horizontal form-label-left">
+    <% _.each(questions, function(question){ %>
+        <div class="form-group m-b-xl" data-name="<%= question.slug %>">
+            <label class="question col-md-3 col-sm-3 col-xs-12 text-left p-r-none m-t-sm control-label" for="<%= question.slug %>"><%= question.name %><span class="required">*</span>
+            </label>
+            <div class="col-md-9 col-sm-9 col-xs-12 text-left radio">
+                <% _.each(question.answers, function(answer){ %>
+                    <div class="col-xs-12">
+                        <div class="i-checks iradio col-xs-2 col-md-1 no-padding">
+                            <label>
+                                <input type="radio" name='<%= question.slug %>' value='<%= answer.weight %>'>
+                            </label>
+                        </div>
+                        <div class="col-xs-10 col-md-11 p-l-0 p-t-10 border-bottom p-bottom-10">
+                            <%= answer.name %>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    <% }); %>
+</form>

@@ -1,0 +1,17 @@
+<div class="form-group">
+    <label class="control-label" for="id_consultant">Select ExO Advisor</label>
+    <select class="form-control select2" id="id_consultant" name="consultant" data-placeholder="Select a consultant" required="required">
+    </select>
+</div>
+<div class="form-group">
+    <label class="control-label" for="id_timeslot">Select a time slot</label>
+    <% time_slots.each(function(value){ %>
+        <div class='i-checks m-t-none block-select-time-slot'>
+            <label>
+                <input type='radio' value="<%= value.get('id') %>" name='timeslot' required> <i></i>
+                <div class="media-middle d-inline data"><%= value.get('name') %></div>
+            </label>
+        </div>
+    <% }); %>
+</div>
+

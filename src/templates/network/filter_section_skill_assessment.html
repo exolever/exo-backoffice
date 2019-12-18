@@ -1,0 +1,17 @@
+<h4><%= name %></h4>
+<table class='table'>
+    <tr>
+        <th>Question</th>
+        <th>Answers</th>
+    </tr>
+    <% collection.each(function(model){ %>
+        <tr>
+            <td><%= model.get('question').name %> <a class="btn btn-default delete btn-xs" data-question="<%= model.get('question').value %>" data-section="<%= slug %>"><i class="fa fa-trash-o"></i></a></td>
+            <td>
+                <% _.each(model.get('answers'), function(answer){ %>
+                    * <%= answer.name %><br>
+                <% }); %>
+            </td>
+    <% }); %>
+</table>
+<div class='btn btn-success text-center add-filter-button' data-section='<%= slug %>'>Add Filter</div>

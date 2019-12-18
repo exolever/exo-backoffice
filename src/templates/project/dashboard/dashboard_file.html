@@ -1,0 +1,45 @@
+<div class="row-flex flex-items-xs-middle p-t-10 p-b-10 m-r m-l">
+    <div class='p-relative col-flex-md-1'>
+        <i class="fa fa-<%= file_type %> f-24"></i>
+    </div>
+     <div  class='col-flex-md-10'>
+        <p class="cut-text m-b-none">
+            <a href="#" class="dev__show_file text-default">
+                <strong><%= name  %>.<%= extension %></strong>
+            </a>
+        </p>
+        <% if (show_project || has_to_show_team) { %>
+            <p class='font-little m-t-xs m-b-none  cut-text'>
+                <span>
+                <% if(show_project) { %>
+                    <%= project_name %><% if (has_to_show_team) { %> - <% } %>
+                <% }; %>
+                <% if (has_to_show_team) { %>
+                    <%= team_name %>
+                <% }; %>
+                </span>
+            </p>
+            <% }; %>
+        <span class='font-little m-t-xs'>
+            <%= modified_str %>
+        </span>
+    </div>
+    <div class="col-flex-md-1">
+        <div class="ibox-tools">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-ellipsis-v"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <% if (write) { %>
+                    <li><a href="#" class="dev__edit_file">Edit</a></li>
+                    <li><a href="#" class="dev__remove_file">Remove</a></li>
+                <% }; %>
+                <% if (read) { %>
+                    <li>
+                        <a href="<%= file_url %>" target="_blank">Download</a>
+                    </li>
+                <% }; %>
+            </ul>
+        </div>
+    </div>
+</div>

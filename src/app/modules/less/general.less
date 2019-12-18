@@ -1,0 +1,148 @@
+// General Styles
+
+#page-wrapper{
+    a{
+        color: @clr-grey-700;
+        &:hover{
+            color: @clr-orange-500;
+        }
+    }
+}
+a {
+    color: @clr-orange-500;
+}
+
+a:hover, a:focus {
+    color: @clr-orange-500;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+
+// general tabs
+
+.tab-content .fa {
+    font-size: 20px;
+}
+
+
+// tipography
+
+h2 {
+    font-size: 24px;
+    margin-top: 13px;
+    margin-bottom: 17px;
+}
+h6 {
+    font-size: 12px;
+}
+
+// X-Editable Popover
+
+div.popover{
+    z-index: 99999;
+}
+
+// dropdown-toggle
+
+.dropdown-toggle:focus {
+    outline: 0;
+    background: transparent;
+}
+
+// Styles Tabs
+
+.tabs-container .nav > li.active > a {
+    background: @clr-white-list;
+}
+
+
+// Details Customer and more details
+
+.media-body h3 {
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    width: 100%;
+    p a{
+        padding: 0px;
+    }
+}
+
+
+// Styles labels
+
+.label-positive {
+  .label-variant-green;
+  .color-white;
+}
+
+
+// For box
+
+.gray-box {
+    background: @clr-grey-50;
+    display: block;
+    margin: 0.5em;
+    min-height: 35em;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+// For Cohorts
+.box-type-cohort {
+    .border-box-details;
+}
+
+.cursor-pointer{
+    cursor: pointer !important;
+}
+
+.p-relative{
+    position: relative;
+}
+
+.content-vertical-align{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content-horizantal-center{
+    display: flex !important;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content-vertical-align-left{
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.row-hover-bg{
+    &:hover{
+        .gray-bg;
+    }
+}
+
+.text-dark-gray{
+    color: @dark-gray;
+}
+
+body.waiting * {
+    cursor: progress !important;
+}

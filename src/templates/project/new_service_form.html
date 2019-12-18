@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="form-group required" aria-required="true">
+      <label class="control-label">Type of project</label>
+      <select class="form-control select2" id="id_type_project" name="type_project" data-placeholder="Select a type of project" required="required" aria-hidden="true">
+        <option value="">Select a type of project</option>
+        <% if (can_add_automated == 'True') { %>
+        <option value='sprintautomated'>ExO Automated Sprint</option>
+        <% } %>
+        <option value='genericproject'>ExO Generic Project</option>
+        <option value='fastracksprint'>Fastrack</option>
+      </select>
+      </div>
+  </div>
+</div>
+<div class="row m-b-md">
+  <div class="col-lg-12">
+      <label class="control-label" for="duration">Project duration</label>
+    </div>
+  <div class='col-lg-6'>
+        <input class="form-control" id="id_duration" maxlength="200" name="duration" placeholder="Duration" required="required" title="" type="integer" aria-required="true">
+  </div>
+  <div class='col-lg-6'>
+        <select class="form-control select2" id="id_step_unit" name="step_unit" data-placeholder="Units" required="required" aria-hidden="true">
+          <option value=''></option>
+          <option value='W'>Weeks</option>
+          <option value='D'>Days</option>
+          <option value='P'>Period</option>
+        </select>
+   </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="form-group required" aria-required="true">
+      <label class="control-label" for="name">Project name</label>
+      <input class="form-control" id="id_name" maxlength="200" name="name" placeholder="Type a service name" required="required" title="" type="text" aria-required="true">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="form-group required" aria-required="true">
+      <label class="control-label">Does it have a Partner?</label>
+      <select class="form-control select2" id="id_has_partner" name="has_partner" data-placeholder="Select a choice" required="required" aria-hidden="true">
+        <option value="">Select a choice</option>
+        <option value='yes'>Yes</option>
+        <option value='no'>No</option>
+      </select>
+      </div>
+  </div>
+</div>
+<div class="row hide" id="dev__partner">
+  <div class="col-lg-12">
+    <div class="form-group required">
+      <label class="control-label" for="partner">Partner</label>
+      <select class="form-control" id="partner" name="partner" data-placeholder="Select a partner" aria-hidden="true">
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="row hide" id="dev__customer">
+  <div class="col-lg-12">
+    <div class="form-group required">
+      <label class="control-label" for="name">Client</label>
+      <select class="form-control" id="customer" name="customer" data-placeholder="Select a client" required="required" aria-hidden="true">
+      </select>
+    </div>
+  </div>
+</div>

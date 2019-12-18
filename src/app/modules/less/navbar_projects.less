@@ -1,0 +1,47 @@
+// Styles navbar Projects
+
+#navbar-static-top-projets {
+	.navbar-collapse.collapse {
+		margin: 0;
+		padding: 0;
+	}
+	li.active {
+		background: @clr-grey-500;
+		a {
+			background: @clr-grey-100;
+			:hover {
+				background: @clr-grey-100;
+			}
+		}
+	}
+	a {
+		color: @clr-grey-700;
+		&.active {
+			background: @clr-grey-200;
+		}
+	}
+  	ul#dropdown-menu-navbar-projects.dropdown-menu {
+  		padding: 0px;
+		border-radius: 0px;
+  		li {
+  			background: transparent;
+	  		a {
+	  			background: transparent;
+	  			&:hover {
+	  				background: @clr-grey-200;
+	  			}
+	  		}
+		}
+  	}
+  	.nav {
+  		& > li {
+  			&.active{
+  				background: @clr-white-list;
+  				border-left: transparent;
+  			}
+  		}
+  		.open > a {
+			background: @clr-grey-200;
+		}
+  	}
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+.md-skin {
+  background-color: #FAFAFA;
+}
+#not-found {
+  font-family: 'Lato', sans-serif;
+  background-color: #FAFAFA;
+  height: 100%;
+  .logo {
+    position: relative;
+    top: 15px;
+    left: 30px;
+    width: 200px;
+    height: 120px;
+    background-repeat: no-repeat;
+    .img-retina('../assets/images/logotype_lever.svg','../assets/images/logotype_lever.svg', 200px, 120px);
+  }
+
+  .not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(~"100% - 112px");
+    padding: 0px 15px;
+    .not-found-details {
+      display: flex;
+      flex-direction: column;
+
+      .error-code, .error-message {
+        font-family: HKGrotesk;
+        color: @exo-color-secondary;
+        font-size: 52px;
+        font-weight: bold;
+        line-height: 60px;
+      }
+
+      .error-description {
+        font-family: HKGrotesk;
+        font-size: 26px;
+        line-height: 29px;
+        font-weight: bold;
+        color: @exo-color-primary;
+        padding-top: 40px;
+      }
+      .map_title {
+        font-family: "Roboto";
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+        color: @exo-color-primary;
+        a {
+          text-transform: uppercase;
+          width: auto;
+          height: 40px;
+          border-radius: 20px;
+          background-color: @exo-color-secondary;
+          padding: 10px 20px;
+          color: #ffffff;
+        }
+      }
+      .map_content{
+        font-family: HKGrotesk;
+        font-size: 16px;
+        font-weight: bold;
+        color: @exo-color-primary;
+      }
+      ul{
+        list-style-type: initial;
+        padding-left: 0px;
+        li{
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

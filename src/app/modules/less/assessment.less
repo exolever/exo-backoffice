@@ -1,0 +1,176 @@
+// Styles for Survey welcome
+.welcome {
+    background: #fafafa;
+
+    .middle-box {
+        width: 800px;
+        padding: 7% 0 7% 0;
+        max-width: 800px;
+        @media (max-width: @screen-md-min) {
+            width: 100%;
+        }
+        h1 {
+            font-size: large;
+        }
+        .wellcome-msg p {
+            color: #263238;
+            font-weight:regular;
+            margin-top: 20px;
+        }
+        .logoExOLEVER.medium {
+            padding: 0;
+            width: 250px;
+            margin: 0;
+        }
+    }
+    // For wizard welcome
+    #box-survey-welcome,
+    #box-skill-assessment {
+        margin: 0 auto;
+        max-width: 1024px;
+        padding: 7% 0;
+        img {
+            border: 2px solid @clr-grey-300;
+        }
+        div.step_body {
+            background: @clr-white-list;
+        }
+        .box-survey,
+        .box-skill-assessment {
+            background: @clr-white-list;
+            border-radius: 4px;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+            padding-bottom: 30px !important;
+        }
+        .wizard {
+            & > .steps {
+                text-align: center;
+                margin: 50px 0px 5px 0px;
+                background: transparent;
+                & a {
+                    border-radius: 100%;
+                    padding: 7px 0px 6px 3px !important;
+                    line-height: 18px;
+                    margin-bottom: 9px;
+                    width: 30px;
+                }
+                & li.done {
+                    background: transparent !important;
+                }
+            }
+            &.col-12 > .steps {
+                .steps_assessment(100%, 10);
+            }
+            &.col-4 > .steps {
+                .steps_assessment(25%, 3);
+            }
+            & > .content {
+                    width: calc(~"100% - 55px");
+                    padding: 0;
+                    margin: 0px 0px 0px 55px;
+                    background: transparent;
+                & > .body {
+                    text-align: center;
+                    font-size: 26px;
+                    margin: 0px;
+                    padding: 0px 0px 0px 9px;
+                    height: auto;
+                    }
+                    h2 {
+                        text-align: center;
+                        font-size: 26px;
+                        margin-bottom: 60px;
+                        margin-top: 25px;
+                    }
+                    form {
+                        font-size: 14px;
+                    }
+                    label {
+                        font-weight: normal;
+                        &.question {
+                            font-weight: 600;
+                            .required{
+                                color: #C51162;
+                            }
+                        }
+                    }
+            }
+            & > .actions {
+                text-align: center;
+                padding-left: 95px;
+                li {
+                    width: auto !important;
+                }
+            }
+        }
+    }
+}
+
+// Styles only for box-skill-assessment
+.welcome #box-skill-assessment {
+    padding: 0px !important;
+    max-width: 1280px;
+    .box-skill-assessment {
+        .wizard  {
+            & > .steps {
+                .current a {
+                    background: @clr-blue-700 !important;
+                }
+                .done a {
+                    background: @clr-blue-200 !important;
+                }
+            }
+            & > .content {
+                border-top: none;
+                h2 {
+                    margin: 0px 0px 25px -55px;
+                }
+            }
+            & > .body {
+                padding: 15px 40px 0px 0px;
+            }
+        }
+        .languages {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 300px;
+        }
+    }
+    img {
+        border: none;
+        width: 220px;
+        margin-top: 20px;
+    }
+    .i-checks {
+        div {
+            margin-top: 0px !important;
+        }
+        span {
+            &.media-middle {
+                width: 90%;
+                display: inline;
+            }
+        }
+    }
+}
+
+.x_title {
+    font-size: 20px;
+    padding-top: 6px;
+}
+
+// Style for thanks
+#end-survey {
+    margin: 7%;
+    h1 {
+        margin-top: 0px;
+    }
+}
+
+.questions {
+    width: 94%;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    vertical-align: middle;
+}

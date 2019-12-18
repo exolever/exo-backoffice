@@ -1,0 +1,30 @@
+<div class="mail-box-header">
+    <div class="mail-tools tooltip-demo">
+        <h3>
+            <span class="font-normal">Subject: </span><%- subject %>
+        </h3>
+        <h5 class='m-b-none'>
+            <span class="pull-right font-normal"><%= date %></span>
+            <span class="font-normal">From: </span><%= from_header %>
+        </h5>
+    </div>
+</div>
+<div class="mail-box">
+    <% _.each(messages, function(message){ %>
+        <div class="mail-body">
+            <p>From: <strong><%= message.from_address %></strong></p>
+            <div class="m-b-md">
+                <% if (message.html) { %>
+                    <%= message.html %>
+                <% } else { %>
+                    <%= message.text %>
+                <% } %>
+            </div>
+            <% if (!message.outgoing) { %>
+                <button class='text-left btn btn-default border-orange dev__reply' data-message="<%= message.id %>" data-subject="<%= message.subject %>" data-to="<%= message.from_address %>">Reply</button>
+            <% } %>
+            <span class="pull-right font-normal"><%= message.date %></span>
+        </div>
+    <% }); %>
+    <div class="clearfix"></div>
+</div>

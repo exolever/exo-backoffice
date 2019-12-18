@@ -1,0 +1,80 @@
+// Styles for form
+
+.form-inline .input-group {
+    margin-bottom: 15px;
+    z-index: 0;
+}
+
+:focus {
+    background: transparent;
+	border-color: 2px solid @navy !important;
+}
+
+form btn i fa {
+    font-size: 18px;
+}
+
+form .form-control#id_search{
+    height: 34px;
+}
+
+.form-group.required label:after {
+	content: "*";
+	color: #C51163;
+	margin-left: 5px;
+}
+
+label.control-label{
+    color: #37474F;
+}
+// Form report
+
+#form-report, #tools-report {
+    label {
+	   padding-bottom: 5px;
+    }
+    .filter {
+        background: @clr-grey-100;
+        border-top: 1px solid @clr-grey-200;
+        border-bottom: 1px solid @clr-grey-200;
+        padding: 35px 20px 35px 20px;
+        margin: -20px -5px 40px -5px;
+    }
+}
+
+
+// For errors select
+
+#id_customer-error {
+	position: absolute;
+    top: -25px;
+    left: 65px;
+}
+
+
+// Editable form
+.editableform i {
+   line-height: 20px;
+}
+
+
+// For forms user profile
+.editable-input {
+
+    span.select2-selection {
+        height: 35px !important;
+        }
+    input {
+        &.form-control {
+            padding-right: 43px !important;
+
+        }
+    }
+}
+
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label{
+    color: #FF393F;
+}
+.help-block{
+    font-size:12px;
+}

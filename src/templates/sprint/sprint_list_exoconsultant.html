@@ -1,0 +1,17 @@
+<tr>
+    <td rowspan="<%= value.roles.length %>">
+        <img alt="image" class="img-circle m-r-xs" src="<%= value.thumbnail %>" />
+        <a href="<%= value.url_profile %>" alt="Profile of <%= value.name %>">
+            <%= value.name %>
+        </a>
+    </td>
+    <% _.each(value.roles, function(role){ %>
+      <td><%= role.role_display %></td>
+      <td><%= value.email %></td>
+      <td><% if (role.can_delete){ %>
+              <i class="fa fa-trash delete pull-right" data-pk="<%= role.position %>"></i>
+          <% } %>
+      </td>
+      </tr><tr>
+    <% }); %>
+</tr>

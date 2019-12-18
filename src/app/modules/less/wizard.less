@@ -1,0 +1,255 @@
+// Styles for wizard
+
+.wizard {
+    & > .steps .current a,
+    & > .steps .current a:hover,
+    & > .steps .current a:active,
+    & > .actions a, & > .steps .current a,
+    & > .steps .current {
+        a {
+            border-radius: 0px;
+            background: #C51162 !important;
+            color: white !important;
+            &:hover {
+                border-radius: 0px;
+            }
+            &:active {
+                background: @clr-orange-500;
+            }
+        }
+    }
+    #horizontal-timeline::before {
+        background: #eceff1;
+    }
+    .wizard > .steps .disabled a, .wizard > .steps .disabled a:hover, .wizard > .steps .disabled a:active {
+        background: #ECEFF1;
+        color: #78909C;
+    }
+    & > .actions a, & > .actions a:hover, & > .actions a:active {
+       background: @clr-orange-500;
+    }
+    & > .actions a:hover {
+        background: @clr-orange-700;
+        border-radius: 3px;
+    }
+    & > .steps {
+        &.current {
+            a {
+                border-radius: 0px;
+            }
+        }
+        width: auto !important;
+        background: @clr-grey-200;
+        border-radius: 20px;
+        margin: 0px 5px 15px 7px;
+        font-size: 14px;
+        .disabled {
+            a, a:hover {
+                border-radius: 0px;
+            }
+        }
+        a {
+            background: @clr-orange-200;
+            margin: 0em;
+            &:focus {
+                outline: none !important;
+            }
+            &:hover {
+                margin: 0em;
+                border-radius: 20px;
+            }
+        }
+        & > ul {
+            & > li {
+                width: 50%;
+                &.first.current {
+                    a {
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                        border-top-left-radius: 25px;
+                        border-bottom-left-radius: 25px;
+                        background: @clr-orange-500;
+                    }
+                }
+                &.first.done {
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    border-top-left-radius: 25px;
+                    border-bottom-left-radius: 25px;
+                }
+                &.done {
+                    border-radius: 0px;
+                }
+                &.last.current {
+                    a {
+                        border-top-right-radius: 25px;
+                        border-bottom-right-radius: 25px;
+                    }
+                }
+                &.disabled.last {
+                    a {
+                        border-top-right-radius: 25px;
+                        border-bottom-right-radius: 25px;
+                    }
+                }
+            }
+        }
+        .done, .done a {
+            background: @clr-grey-200 !important;
+            border-radius: 20px;
+            color: @clr-grey-400;
+            &:hover {
+                color: @clr-grey-400;
+            }
+        .done a {
+                border-top-right-radius: 25px !important;
+                border-bottom-right-radius: 25px !important;
+            }
+        }
+        .number {
+            vertical-align: baseline !important;
+        }
+    }
+
+    & > .steps a, .wizard > .steps a:hover, .wizard > .steps a:active {
+        border-radius: 20px;
+        padding: 1px 10px 2px 10px !important;
+    }
+    & > .steps .number {
+        font-size: 1em;
+    }
+    & > .steps .done a, & > .steps .done a:hover, & > .steps .done a:active, & > .steps li.done {
+        background: #e7a1bb !important;
+        color: @clr-white-list;
+    }
+    .text_step_wizard {
+        margin: 8px 10px 20px 16px;
+        font-size: 20px;
+        font-weight: 200;
+    }
+    & > .content {
+        min-height: 31em;
+        background: none;
+        border-top: 1px solid @border-color;
+        border-radius: 0px;
+        margin-top: 30px;
+        &.all-height {
+            height: 100%;
+        }
+        &> .body input.error {
+            background: @clr-red-50;
+            border: 1px solid @clr-red-100;
+        }
+    }
+    & > .actions ul li a {
+        border-radius: @btn-border-radius;
+        color: inherit;
+        background: white;
+        border: 1px solid @border-color;
+        text-transform: uppercase;
+        &:hover {
+            color: @clr-grey-700;
+            background-color: @clr-grey-300;
+            border-color: @clr-grey-300;
+        }
+        &:active, &[href="#next"], &[href="#finish"]{
+            background-color: @navy;
+            border-color: @navy;
+            color: @clr-white-list !important;
+        }
+
+    }
+    &.styles-form {
+        .ibox-content > div.js-organization-container {
+            margin: 0px 0px 20px 14px;
+        }
+        i.fa, .ibox-content fieldset div i.fa {
+            font-size: 180px;
+            color: @clr-grey-100;
+        }
+        h1 {
+            margin: -4px 0px 0px 21px;
+            padding-bottom: 5px;
+            font-size: 25px;
+        }
+    }
+    & > .content {
+        &.settings {
+            min-height: 22em;
+            padding: 2.5%;
+        }
+        & > .body {
+            width: 100%;
+            height: auto;
+        }
+        & > .body ul > li {
+            list-style: none;
+        }
+        & > .body input {
+            border: 1px solid @clr-grey-300;
+        }
+    }
+}
+
+.welcome #box-survey-welcome .wizard>.steps {
+    background: transparent;
+    li.done {
+        background: transparent !important;
+    }
+}
+
+
+// For buttons wizard - btn-positive-choice
+
+.wizard > .actions ul li a[href="#next"], .wizard > .actions ul li a[href="#finish"] {
+  background-color: @navy;
+  border-color: @navy;
+  color: @clr-white-list !important;
+}
+
+
+// Required no
+.wizard > .content > .body label.error:after {
+    content: "" !important;
+}
+
+
+// Customer form
+// Team form
+// ExO Colaborator form
+.wizard-big {
+    & >.actions {
+        & > ul > li {
+            width: auto;
+        }
+    }
+    &.wizard-step-4 > .steps {
+        li {
+            width: 25% !important;
+        }
+    }
+    &.wizard-step-3 {
+        &> .steps {
+            li {
+               width: calc(100%/3);
+            }
+        }
+    }
+    &.wizard-step-2 {
+        &> .steps {
+            li {
+               width: 50%;
+            }
+        }
+    }
+}
+
+.wizard > .steps .disabled a, .wizard > .steps .disabled a:hover, .wizard > .steps .disabled a:active{
+    color: #aaa !important;
+}
+
+
+.wizard > .actions .disabled a, .wizard > .actions .disabled a:hover, .wizard > .actions .disabled a:active{
+    color: #37474F;
+    background: #ECEFF1;
+}
