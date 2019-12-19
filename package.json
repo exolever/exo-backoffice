@@ -63,7 +63,7 @@
     "gulp-if": "^2.0.2",
     "gulp-sass": "^2.3.2",
     "gulp-shell": "^0.5.2",
-    "jquery": "^1.11.3",
+    "jquery": "^3.4.0",
     "lesshat": "^4.0.1",
     "lodash.frompairs": "^4.0.1",
     "yargs": "^6.4.0"
